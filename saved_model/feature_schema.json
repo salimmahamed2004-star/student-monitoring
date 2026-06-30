@@ -1,0 +1,17 @@
+{
+  "dynamic_features_order": [
+    "engagement_score",
+    "assessment_score",
+    "submission_latency",
+    "assessment_due_flag",
+    "cumulative_avg_score"
+  ],
+  "static_features_order": [
+    "studied_credits",
+    "num_of_prev_attempts",
+    "education_encoded",
+    "age_encoded"
+  ],
+  "n_timesteps": 39,
+  "global_max_week": 38
+}

@@ -1,0 +1,19 @@
+# Datasets
+Dataset/
+oulad_prepared.npz.zip
+
+# Node
+node_modules/
+dist/
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# IDE files
+.vscode/
+.idea/
+.gemini/
