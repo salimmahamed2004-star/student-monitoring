@@ -1,6 +1,33 @@
 # Aegis: Student Academic Monitoring & Early Warning System
 
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Flask](https://img.shields.io/badge/Flask-3.x-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.x-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
 Aegis is an intelligent, early warning academic dashboard designed to monitor student performance, predict risk tiers, and generate dynamic AI-driven advisory messages. It utilizes deep learning models (LSTM & 1D CNN) trained on student behavior sequences and integrates a premium web interface for academic advisors and students.
+
+---
+
+## 🏗️ System Architecture Flow
+
+The diagram below outlines the data ingestion, feature extraction, dual-model classification, and AI advisor message pipeline:
+
+```mermaid
+graph TD
+    A[OULAD Dataset / VLE Interactions] -->|Weekly Behavior Sequences| B(MySQL Database)
+    B -->|Time-series & Demographics| C{Aegis Flask API}
+    C -->|Scalers & Feature Schema| D[Dynamic Feature Scaling]
+    D -->|LSTM Predictor| E[LSTM Model - AUC: 98.41%]
+    D -->|CNN Predictor| F[CNN Model - AUC: 97.55%]
+    E -->|Risk Score| G[Advising Engine]
+    F -->|Risk Score| G
+    G -->|Context Prompts| H[Groq / OpenAI LLM]
+    H -->|Dual-Paragraph Recommendations| I[AI Interventions Table]
+    I -->|Live Real-time Alerting| J[Advisor & Student React Dashboard]
+```
 
 ---
 
