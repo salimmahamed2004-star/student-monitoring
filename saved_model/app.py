@@ -32,7 +32,7 @@ EARLY_WARNING_WEEK = 13
 print("Models loaded successfully.")
 
 # --- Groq client ---
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "YOUR_GROQ_API_KEY"
 client = OpenAI(api_key=GROQ_API_KEY, base_url="https://api.groq.com/openai/v1")
 
 # --- MySQL ---
